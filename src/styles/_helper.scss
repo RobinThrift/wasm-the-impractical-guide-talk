@@ -1,0 +1,50 @@
+// src/styles/components/_helper.scss 
+
+.reveal div.half {
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+
+    pre {
+        width: auto;
+        display: inline-block;
+    }
+
+    p+pre {
+        margin-top: -1em;
+    }
+
+    &.centred {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.reveal div.horizontal-stack {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    &.with-vertical {
+        align-items: center;
+    }
+}
+
+.reveal .slide.flex-slide {
+    display: flex !important;
+}
+
+.reveal .slides section {
+    .fragment.image-fragment {
+        display: none;
+        transition: none;
+        margin: 0px auto;
+    }
+
+    .fragment.image-fragment.img-frag-current,
+    .fragment.image-fragment.current-fragment {
+        display: block;
+    }
+}
